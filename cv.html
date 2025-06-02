@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>My CV</title>
+
+  <!-- optional: remove default body margins so the PDF truly fills the viewport -->
+  <style>
+    html, body {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+    }
+    /* Make the embed element fill the entire browser window */
+    .pdf-container {
+      width: 100%;
+      height: 100vh;
+      border: none;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- You can use <iframe> or <embed>. Either works in most modern browsers. -->
+  
+  <!-- Option A: using <iframe> -->
+  <iframe
+    src="cv.pdf"
+    class="pdf-container"
+  >
+    <!-- Fallback link if the browser can’t display PDFs inline -->
+    <p>
+      Your browser does not support embedded PDFs. 
+      You can <a href="cv.pdf" target="_blank">download the PDF instead</a>.
+    </p>
+  </iframe>
+  
+  <!-- 
+  Option B: using <embed> instead of <iframe>:
+
+  <embed
+    src="my-cv.pdf"
+    type="application/pdf"
+    class="pdf-container"
+  >
+  -->
+
+</body>
+</html>

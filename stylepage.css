@@ -1,0 +1,247 @@
+/* ===================================================
+   1) GALAXY BACKGROUND + SEMI-TRANSPARENT CONTENT PANEL
+   =================================================== */
+
+/* Make the galaxy (sky.jpg) fill the entire browser window behind everything */
+html {
+    background: url('sky.jpg') no-repeat center center fixed;
+    background-size: cover;
+  }
+  
+  /* Body becomes your “content container” with a semi-transparent white background */
+  body {
+    font-family: Georgia, serif;
+    line-height: 1.6;
+    max-width: 900px;       /* same as before */
+    margin: 0 auto;         /* center horizontally */
+    padding: 20px;
+    color: #333;
+  
+    /* Semi-transparent white so the galaxy shows through slightly */
+    background-color: rgba(255, 255, 255, 0.85);
+  }
+  
+  /* ===================================================
+     2) GLOBAL RESET
+     =================================================== */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* ===================================================
+     3) HEADER: Signature + Navigation
+     =================================================== */
+  header {
+    text-align: center;
+  }
+  
+  /* Signature Image */
+  .signature-container {
+    margin-bottom: 10px;
+  }
+  .signature {
+    max-width: 800px;
+    height: auto;
+  }
+  
+  /* NAVIGATION */
+  nav {
+    border-top: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+    margin-bottom: 30px;
+  }
+  .nav-list {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 10px 0;
+  }
+  .nav-list li a {
+    text-decoration: none;
+    font-size: 16px;
+    color: #333;
+    padding: 5px 0;
+  }
+  .nav-list li a:hover {
+    color: #0066cc;
+    border-bottom: 2px solid #0066cc;
+  }
+  
+  /* ===================================================
+     4) MAIN CONTENT SECTIONS (home.html + Showcase.html)
+     =================================================== */
+  
+  /* “I Wonder” / “This is me” / “Showcase intro”
+     — any section using .intro */
+  .intro {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-bottom: 30px;
+  }
+  
+  /* Left column: intro text */
+  .intro-text {
+    flex: 2 1 400px;
+    min-width: 250px;
+  }
+  .intro-text h1 {
+    font-family: Arial, sans-serif;
+    font-size: 32px;
+    margin-bottom: 15px;
+  }
+  .intro-text p {
+    margin-bottom: 15px;
+    font-size: 16px;
+  }
+  
+  /* Middle column: profile / banner image */
+  .intro-image {
+    flex: 1 1 200px;
+    text-align: center;
+    min-width: 180px;
+  }
+  .profile-photo {
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
+  }
+  
+  /* Right column: sidebar links */
+  .sidebar {
+    flex: 1 1 180px;
+    min-width: 150px;
+  }
+  .sidebar ul {
+    list-style: none;
+  }
+  .sidebar li {
+    margin-bottom: 12px;
+  }
+  .sidebar li a {
+    text-decoration: none;
+    color: #0066cc;
+    font-size: 15px;
+  }
+  .sidebar li a:hover {
+    text-decoration: underline;
+  }
+  
+  /* HORIZONTAL RULE */
+  hr {
+    border: none;
+    border-top: 1px solid #ddd;
+    margin: 30px 0;
+  }
+  
+  /* “What I’m Up To” Section */
+  .up-to {
+    margin-bottom: 50px;
+  }
+  .up-to h2 {
+    font-size: 28px;
+    margin-bottom: 15px;
+    font-family: Arial, sans-serif;
+  }
+  .up-to p {
+    margin-bottom: 20px;
+    font-size: 16px;
+  }
+  .up-to h3 {
+    font-size: 20px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-family: Arial, sans-serif;
+  }
+  .up-to em {
+    font-style: italic;
+  }
+  .highlight {
+    font-weight: bold;
+    color: #555;
+  }
+  
+  /* LINKS INSIDE CONTENT */
+  a {
+    color: #0066cc;
+    text-decoration: none;
+  }
+  a:hover {
+    text-decoration: underline;
+  }
+  
+  /* ===================================================
+     5) SHOWCASE.HTML: PROJECT‐ITEM AS “CARDS”
+     =================================================== */
+  
+  /* Container that holds all cards */
+  .showcase-container {
+    margin-bottom: 50px;
+  }
+  
+  /* Each project becomes a “card” */
+  .project-item {
+    display: flex;
+    flex-wrap: wrap;               /* allow stacking on narrow screens */
+    align-items: flex-start;
+    gap: 20px;
+    background-color: #fff;        /* fully opaque white for the card */
+    width: 70%;                    /* card width (adjust as you like) */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    margin-bottom: 40px;
+  }
+  
+  /* Stagger odd cards (flush left) vs. even cards (flush right) */
+  .showcase-container .project-item:nth-child(odd) {
+    margin-left: 0;                /* flush left */
+    margin-right: auto;
+  }
+  .showcase-container .project-item:nth-child(even) {
+    margin-left: auto;             /* flush right */
+    margin-right: 0;
+  }
+  
+  /* Thumbnail / preview image on the left inside each card */
+  .project-image {
+    flex: 0 0 200px;
+    max-width: 200px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  /* Info text on the right inside each card */
+  .project-info {
+    flex: 1 1 0;
+  }
+  
+  /* Project title inside a card */
+  .project-info h3 {
+    font-family: Arial, sans-serif;
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  /* Project description paragraphs */
+  .project-info p {
+    margin-bottom: 12px;
+    font-size: 15px;
+    line-height: 1.5;
+  }
+  
+  /* “Visit Link” button/text */
+  .project-info a.visit-link {
+    display: inline-block;
+    margin-top: 8px;
+    font-size: 15px;
+    color: #0066cc;
+  }
+  
+  .project-info a.visit-link:hover {
+    text-decoration: underline;
+  }
+  
