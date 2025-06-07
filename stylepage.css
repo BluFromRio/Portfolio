@@ -245,3 +245,48 @@ html {
     text-decoration: underline;
   }
   
+  /* FLOWER STYLE NAV BUTTONS */
+.nav-list li a {
+  text-decoration: none;
+  font-size: 16px;
+  color: #333;
+  padding: 10px 20px;
+  border-radius: 50px;
+  background: linear-gradient(135deg, #fceabb 0%, #f8b500 100%);
+  box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+  transition: transform 0.2s ease;
+}
+
+.nav-list li a:hover {
+  color: white;
+  background: linear-gradient(135deg, #f8b500 0%, #fceabb 100%);
+  transform: scale(1.05);
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+}
+
+/* PDF embed tweaks for CV page */
+.cv-embed-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 30px;
+}
+.cv-embed-container h1 {
+  text-align: center;
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+.cv-embed-container iframe {
+  width: 100%;
+  height: 600px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+.cv-embed-container .open-link {
+  text-align: center;
+  margin-top: 15px;
+}
+.cv-embed-container .open-link a {
+  font-size: 16px;
+  color: #0066cc;
+  text-decoration: underline;
+}
